@@ -7,12 +7,10 @@
 \usage{
 integer_to_fips(v)
 
-integer_to_state_fips(fips)
+integer_to_state_fips(v)
 }
 \arguments{
-\item{v}{integer vector of length 1 or more}
-
-\item{fips}{character vector of county or state-level fips (5-digit zero-padded string)
+\item{v}{integer vector of state-level fips
 to be converted}
 }
 \value{
@@ -25,10 +23,6 @@ are available as 5-digit, 0-padded numbers. To standardize
 these codes for joins across datasets, one may need to convert
 raw integers (non-0-padded) to 5-digit numeric strings. This
 function does that.
-}
-\details{
-A county-level fips code can be truncated to a state fips code since the
-first two digits in the county fips code are the state fips code.
 }
 \section{Functions}{
 \itemize{

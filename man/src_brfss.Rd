@@ -32,4 +32,7 @@ colnames(brfss)
 dplyr::glimpse(brfss)
 
 }
+\author{
+Sean Davis \href{mailto:seandavi@gmail.com}{seandavi@gmail.com}
+}
 \concept{data accessors}
