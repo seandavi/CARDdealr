@@ -18,6 +18,8 @@
 #'
 #' @family data accessors
 #'
+#' @author Sean Davis <seandavi@gmail.com>
+#'
 #' @examples
 #'
 #' brfss = src_brfss(n_max=1000)
@@ -28,8 +30,8 @@
 #'
 #' @export
 src_brfss <- function(...) {
-  fname = s2p_cached_url('https://data.cdc.gov/api/views/dttw-5yxu/rows.csv?date=20231024&accessType=DOWNLOAD')
-  res = readr::read_csv(fname, ...)
+  url = 'https://data.cdc.gov/api/views/dttw-5yxu/rows.csv?date=20231024&accessType=DOWNLOAD'
+  res = readr::read_csv(url, ...)
   res
 }
 

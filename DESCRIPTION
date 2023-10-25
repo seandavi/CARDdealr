@@ -20,9 +20,15 @@ Description: For researchers and administrators trying to understand and
   health and NCI Cancer Center data science needs, the data resources are 
   likely of general use to anyone doing this type of work in any field.
 Suggests:
-  roxygen2
+    roxygen2,
+    tigris,
+    tidycensus,
+    sociome,
+    knitr,
+    rmarkdown
 Encoding: UTF-8
 LazyData: true
 License: MIT + file LICENSE
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
