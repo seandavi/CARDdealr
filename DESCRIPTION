@@ -1,4 +1,4 @@
-Package: CanDEALR
+Package: CARDdealr
 Type: Package
 Title: Easy access to Epidemiological, Population, and Public Health Data 
   (for cancer centers)
@@ -18,8 +18,11 @@ Description: For researchers and administrators trying to understand and
   use catalog of functions that access high-value epidiomiology and public
   health datasets. While the package caters to cancer population
   health and NCI Cancer Center data science needs, the data resources are 
-  likely of general use to anyone doing this type of work in any field. 
+  likely of general use to anyone doing this type of work in any field.
+Suggests:
+  roxygen2
 Encoding: UTF-8
 LazyData: true
 License: MIT + file LICENSE
 RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
