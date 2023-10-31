@@ -36,7 +36,7 @@ recommendations and monitor and compare appropriate use of Lung-RADS#'
 # example code
 
 
-lcs = src_acr_lung_cancer_screening(nrows=1000)
+lcs = src_acr_lung_cancer_screening_data()
 
 colnames(lcs)
 
