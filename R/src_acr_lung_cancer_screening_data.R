@@ -16,12 +16,9 @@
 #' 
 #' @import lgr
 #' @importFrom dplyr mutate select filter
-#' @importFrom dialr phone
 #' 
-#' @param \dots passed to [read.table::read.csv()] and useful for limiting
+#' @param \dots passed to [readr::read_csv()] and useful for limiting
 #'   the number of rows read for testing or glimpsing data.
-#'   
-#' @param state Character string or vector of character strings of state postal abbreviations
 #' 
 #' @return A data frame (data.frame) containing data pulled from LCSR.
 #'
@@ -42,32 +39,24 @@
 #' dplyr::glimpse(lcs)
 #'
 #' @export
-
-
-#define function for downloading zip file and writing CSVs to disk
-src_acr_lung_cancer_screening_data = function(state = NULL, ...){
+src_acr_lung_cancer_screening_data = function(...){
     lg <- get_carddealr_logger()
     
     lg$info('Starting acr_lung_cancer_screening_data')
     
-    lcs = read.csv('https://report.acr.org/t/PUBLIC/views/NRDRLCSLocator/ACRLCSDownload.csv',
-                   header=T,...)
+    lcs = read_csv('https://report.acr.org/t/PUBLIC/views/NRDRLCSLocator/ACRLCSDownload.csv',...)
     
     colnames(lcs) = c('Name','Street','City','State','Zip_code','Phone_number', 'Notes', 'inRegistry')
     
-    lcs = lcs %>% 
+    lcs = lcs |> 
         dplyr::mutate(
             Address = paste0(Street, ', ', City, ', ', State, ' ', Zip_code),
-            Phone_number = format(dialr::phone(Phone_number, 'US'), format='NATIONAL', clean=F, strict=T),
+            #Phone_number = format(dialr::phone(Phone_number, 'US'), format='NATIONAL', clean=F, strict=T),
             Type = 'Lung Cancer Screening',
             latitude = '',
             longitude = ''
-        ) %>% 
+        ) |> 
         dplyr::select(Type, Name, Address, State, Phone_number, Notes, latitude, longitude) 
-    
-    if (!is.null(state)){
-        lcs = lcs %>% dplyr::filter(State %in% state)
-    }
     
     lg$info('Completing acr_lung_cancer_screening_data')
     
