@@ -57,19 +57,20 @@
     <h2>See also</h2>
     <div class="dont-index"><p>Other data accessors: 
 <code><a href="src_acr_lung_cancer_screening_data.html">src_acr_lung_cancer_screening_data</a>()</code>,
-<code><a href="src_brfss.html">src_brfss</a>()</code></p></div>
+<code><a href="src_brfss.html">src_brfss</a>()</code>,
+<code><a href="src_epa_superfund_data.html">src_epa_superfund_data</a>()</code></p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">bls_unemployment</span> <span class="op">=</span> <span class="fu">src_bls_unemployment_data</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [06:44:54.992] Starting bls_unemployment_data</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [06:44:54.993] Reading url https://download.bls.gov/pub/time.series/la/la.series</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [06:45:01.055] Reading url https://download.bls.gov/pub/time.series/la/la.footnote</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [06:45:01.176] Reading url https://download.bls.gov/pub/time.series/la/la.data.64.County</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [06:45:32.404] Reading url https://download.bls.gov/pub/time.series/la/la.data.65.City</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [06:45:46.432] Completing bls_unemployment_data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [15:23:38.878] Starting bls_unemployment_data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [15:23:38.879] Reading url https://download.bls.gov/pub/time.series/la/la.series</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [15:23:40.100] Reading url https://download.bls.gov/pub/time.series/la/la.footnote</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [15:23:40.243] Reading url https://download.bls.gov/pub/time.series/la/la.data.64.County</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [15:23:56.543] Reading url https://download.bls.gov/pub/time.series/la/la.data.65.City</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [15:24:11.731] Completing bls_unemployment_data</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">bls_unemployment</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "series_id"      "year"           "period"         "value"         </span>
