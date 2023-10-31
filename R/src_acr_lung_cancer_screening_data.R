@@ -55,7 +55,6 @@ src_acr_lung_cancer_screening_data = function(state = NULL, ...){
         dplyr::filter(ifelse(!is.null(state), fk_ref_state_code %in% state, TRUE)) |>
         dplyr::mutate(
             Address = paste0(Street, ', ', City, ', ', State, ' ', Zip_code),
-
             Type = 'Lung Cancer Screening',
             latitude = '',
             longitude = ''
