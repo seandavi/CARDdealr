@@ -16,6 +16,8 @@
 #' 
 #' @import lgr
 #' @importFrom dplyr mutate select filter
+#'    
+#' @param state Character string or vector of character strings of state postal abbreviations
 #' 
 #' @param \dots passed to [readr::read_csv()] and useful for limiting
 #'   the number of rows read for testing or glimpsing data.
@@ -32,14 +34,15 @@
 #' # example code
 #' 
 #'
-#' lcs = src_acr_lung_cancer_screening_data()
+#' lcs = src_acr_lung_cancer_screening_data(nrows=1000)
 #'
 #' colnames(lcs)
 #'
 #' dplyr::glimpse(lcs)
 #'
 #' @export
-src_acr_lung_cancer_screening_data = function(...){
+
+src_acr_lung_cancer_screening_data = function(state = NULL, ...){
     lg <- get_carddealr_logger()
     
     lg$info('Starting acr_lung_cancer_screening_data')
@@ -49,9 +52,10 @@ src_acr_lung_cancer_screening_data = function(...){
     colnames(lcs) = c('Name','Street','City','State','Zip_code','Phone_number', 'Notes', 'inRegistry')
     
     lcs = lcs |> 
+        dplyr::filter(ifelse(!is.null(state), fk_ref_state_code %in% state, TRUE)) |>
         dplyr::mutate(
             Address = paste0(Street, ', ', City, ', ', State, ' ', Zip_code),
-            #Phone_number = format(dialr::phone(Phone_number, 'US'), format='NATIONAL', clean=F, strict=T),
+
             Type = 'Lung Cancer Screening',
             latitude = '',
             longitude = ''
