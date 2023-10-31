@@ -9,12 +9,10 @@
 }
 }
 \usage{
-src_acr_lung_cancer_screening_data(state = NULL, ...)
+src_acr_lung_cancer_screening_data(...)
 }
 \arguments{
-\item{state}{Character string or vector of character strings of state postal abbreviations}
-
-\item{\dots}{passed to \code{\link[read.table:read.csv]{read.table::read.csv()}} and useful for limiting
+\item{\dots}{passed to \code{\link[readr:read_delim]{readr::read_csv()}} and useful for limiting
 the number of rows read for testing or glimpsing data.}
 }
 \value{
@@ -38,7 +36,7 @@ recommendations and monitor and compare appropriate use of Lung-RADS#'
 # example code
 
 
-lcs = src_acr_lung_cancer_screening(nrows=1000)
+lcs = src_acr_lung_cancer_screening_data()
 
 colnames(lcs)
 
@@ -47,6 +45,7 @@ dplyr::glimpse(lcs)
 }
 \seealso{
 Other data accessors: 
+\code{\link{src_bls_unemployment_data}()},
 \code{\link{src_brfss}()}
 }
 \author{

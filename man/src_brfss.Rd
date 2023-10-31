@@ -32,6 +32,11 @@ colnames(brfss)
 dplyr::glimpse(brfss)
 
 }
+\seealso{
+Other data accessors: 
+\code{\link{src_acr_lung_cancer_screening_data}()},
+\code{\link{src_bls_unemployment_data}()}
+}
 \author{
 Sean Davis \href{mailto:seandavi@gmail.com}{seandavi@gmail.com}
 }

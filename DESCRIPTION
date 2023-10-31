@@ -2,7 +2,7 @@ Package: CARDdealr
 Type: Package
 Title: Easy access to Epidemiological, Population, and Public Health Data 
   (for cancer centers)
-Version: 0.1.0
+Version: 0.1.2
 Authors@R: c(
     person("Sean", "Davis", , "seandavi@gmail.com", 
       role = c("aut", "cre"),
@@ -14,7 +14,7 @@ Authors@R: c(
 Description: For researchers and administrators trying to understand and 
   describe the populations they represent or work with, a necessary and
   often challenging first step is to identify and then access data. 
-  The CanDEALR (Can-do Data Extraction and LoadeR) package provides a ready-to-
+  This package provides a ready-to-
   use catalog of functions that access high-value epidiomiology and public
   health datasets. While the package caters to cancer population
   health and NCI Cancer Center data science needs, the data resources are 

@@ -19,7 +19,7 @@
 #'    
 #' @param state Character string or vector of character strings of state postal abbreviations
 #' 
-#' @param \dots passed to [read.table::read.csv()] and useful for limiting
+#' @param \dots passed to [readr::read_csv()] and useful for limiting
 #'   the number of rows read for testing or glimpsing data.
 #' 
 #' @return A data frame (data.frame) containing data pulled from LCSR.
@@ -47,8 +47,7 @@ src_acr_lung_cancer_screening_data = function(state = NULL, ...){
     
     lg$info('Starting acr_lung_cancer_screening_data')
     
-    lcs = read.csv('https://report.acr.org/t/PUBLIC/views/NRDRLCSLocator/ACRLCSDownload.csv',
-                   header=T,...)
+    lcs = read_csv('https://report.acr.org/t/PUBLIC/views/NRDRLCSLocator/ACRLCSDownload.csv',...)
     
     colnames(lcs) = c('Name','Street','City','State','Zip_code','Phone_number', 'Notes', 'inRegistry')
     
@@ -56,6 +55,7 @@ src_acr_lung_cancer_screening_data = function(state = NULL, ...){
         dplyr::filter(ifelse(!is.null(state), fk_ref_state_code %in% state, TRUE)) |>
         dplyr::mutate(
             Address = paste0(Street, ', ', City, ', ', State, ' ', Zip_code),
+
             Type = 'Lung Cancer Screening',
             latitude = '',
             longitude = ''
