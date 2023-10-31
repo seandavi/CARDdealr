@@ -14,7 +14,7 @@ Authors@R: c(
 Description: For researchers and administrators trying to understand and 
   describe the populations they represent or work with, a necessary and
   often challenging first step is to identify and then access data. 
-  The CanDEALR (Can-do Data Extraction and LoadeR) package provides a ready-to-
+  This package provides a ready-to-
   use catalog of functions that access high-value epidiomiology and public
   health datasets. While the package caters to cancer population
   health and NCI Cancer Center data science needs, the data resources are 
