@@ -32,7 +32,7 @@
 #' # example code
 #' 
 #'
-#' lcs = src_acr_lung_cancer_screening(nrows=1000)
+#' lcs = src_acr_lung_cancer_screening_data(nrows=1000)
 #'
 #' colnames(lcs)
 #'

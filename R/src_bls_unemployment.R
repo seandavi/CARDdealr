@@ -22,6 +22,7 @@
 #' @importFrom dplyr select mutate bind_rows
 #' @importFrom tidyr separate
 #'
+#' @family data accessors
 #'
 #' @examples
 #'

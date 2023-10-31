@@ -45,6 +45,7 @@ dplyr::glimpse(lcs)
 }
 \seealso{
 Other data accessors: 
+\code{\link{src_bls_unemployment_data}()},
 \code{\link{src_brfss}()}
 }
 \author{
