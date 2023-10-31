@@ -8,11 +8,8 @@
 #' includes latitude and longitude information. Each of these databases contains information 
 #' about facilities that are required to report activity to a state or federal system.
 #' 
-#' @import lgr
 #' @import jsonlite
 #' @importFrom dplyr mutate select filter
-#'   
-#' @param state Character string or vector of character strings of state postal abbreviations
 #' 
 #' @return A data frame (data.frame) containing data pulled from the Envirofacts API.
 #'
@@ -25,15 +22,24 @@
 #' @examples
 #' # example code
 #' 
-#' sf = src_epa_superfund_data(state  = c('KY', 'TN'))
+#' sf = src_epa_superfund_data()
+#' dim(sf)
+#' 
+#' if(requireNamespace('ggplot2')) {
+#'   ggplot2::ggplot(sf, ggplot2::aes(x=State)) + 
+#'     ggplot2::geom_bar() +
+#'     ggplot2::coord_flip()
+#' }
+#' 
+#' sf_ky = sf |> dplyr::filter(State=='KY')
+#' dim(sf_ky)
 #'
 #' colnames(sf)
 #'
 #' dplyr::glimpse(sf)
 #'
 #' @export
-
-src_epa_superfund_data = function(state=NULL){
+src_epa_superfund_data = function(){
     lg <- get_carddealr_logger()
     
     lg$info('Starting epa_superfund_data')
@@ -41,7 +47,6 @@ src_epa_superfund_data = function(state=NULL){
     url = paste0('https://data.epa.gov/efservice/ENVIROFACTS_SITE/JSON')
         
     sf = jsonlite::fromJSON(url) |> 
-        dplyr::filter(ifelse(!is.null(state), fk_ref_state_code %in% state, TRUE)) |>
         dplyr::filter(npl_status_name %in% 
                           c('Currently on the Final NPL', 'Deleted from the Final NPL',
                             'Site is Part of NPL Site')) |>

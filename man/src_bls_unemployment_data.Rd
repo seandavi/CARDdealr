@@ -24,6 +24,7 @@ dplyr::glimpse(bls_unemployment)
 \seealso{
 Other data accessors: 
 \code{\link{src_acr_lung_cancer_screening_data}()},
-\code{\link{src_brfss}()}
+\code{\link{src_brfss}()},
+\code{\link{src_epa_superfund_data}()}
 }
 \concept{data accessors}
