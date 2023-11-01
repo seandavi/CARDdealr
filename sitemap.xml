@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/index.html</loc>
   </url>
   <url>
-    <loc>/reference/cdr_get_cache.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/cdr_get_cache.html</loc>
   </url>
   <url>
-    <loc>/reference/get_carddealr_logger.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/get_carddealr_logger.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/integer_to_fips.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/integer_to_fips.html</loc>
   </url>
   <url>
-    <loc>/reference/src_acr_lung_cancer_screening_data.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/src_acr_lung_cancer_screening_data.html</loc>
   </url>
   <url>
-    <loc>/reference/src_bls_unemployment_data.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/src_bls_unemployment_data.html</loc>
   </url>
   <url>
-    <loc>/reference/src_brfss.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/src_brfss.html</loc>
   </url>
   <url>
-    <loc>/reference/src_epa_superfund_data.html</loc>
+    <loc>https://cards-resources.github.io/CARDdealr/reference/src_epa_superfund_data.html</loc>
   </url>
 </urlset>
