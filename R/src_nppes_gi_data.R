@@ -15,6 +15,7 @@
 #' @import jsonlite
 #' @importFrom dplyr mutate select filter
 #' @importFrom tidyr unnest
+#' @importFrom stringr str_to_title
 #'   
 #' @param state Character string or vector of character strings of state postal abbreviations
 #' 
@@ -77,16 +78,16 @@ src_nppes_gi_data = function(state = c(state.abb, 'DC')){
                                                        basic.middle_name, 
                                                        NA),
                             Name = dplyr::case_when(
-                                !is.na(basic.middle_name) ~ str_to_title(paste0(basic.first_name, ' ', 
-                                                                                basic.middle_name, ' ', 
-                                                                                basic.last_name)),
-                                is.na(basic.middle_name) ~ str_to_title(paste0(basic.first_name, ' ', 
-                                                                               basic.last_name))
+                                !is.na(basic.middle_name) ~ stringr::str_to_title(paste0(basic.first_name, ' ', 
+                                                                                         basic.middle_name, ' ', 
+                                                                                         basic.last_name)),
+                                is.na(basic.middle_name) ~ stringr::str_to_title(paste0(basic.first_name, ' ', 
+                                                                                        basic.last_name))
                             ),
                             Phone_number = telephone_number,
                             zip = substr(postal_code, 1, 5),
-                            Address = paste0(str_to_title(address_1), ', ', 
-                                             str_to_title(city), ', ', 
+                            Address = paste0(stringr::str_to_title(address_1), ', ', 
+                                             stringr::str_to_title(city), ', ', 
                                              state, ' ', 
                                              zip),
                             Type = 'GI Provider',
