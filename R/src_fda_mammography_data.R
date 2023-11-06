@@ -15,7 +15,8 @@
 #' are listed in the FDA Certified Mammography Facilities dataset
 #' 
 #' @import lgr
-#' @importFrom dplyr mutate select filter
+#' @importFrom dplyr mutate select filter case_when
+#' @importFrom stringr str_detect
 #' 
 #' @return A data frame (data.frame) containing data pulled from the Envirofacts API.
 #'
@@ -35,7 +36,6 @@
 #' dplyr::glimpse(mam)
 #'
 #' @export
-
 src_fda_mammography_data = function(){
     lg <- get_carddealr_logger()
     
@@ -56,7 +56,7 @@ src_fda_mammography_data = function(){
     txt = files$Name[str_detect(files$Name, pattern = '.txt')]
     
     #read file to dataframe
-    df = read.csv(unz(temp, txt), sep = '|', header=F)
+    df = read.csv(unz(temp, txt), sep = '|', header=FALSE)
     
     #unlink the temp file
     unlink(temp)
@@ -69,8 +69,8 @@ src_fda_mammography_data = function(){
         dplyr::filter(!(State %in% c('AP', 'AE', 'GU', 'VI'))) |> 
         dplyr::mutate(
             BestStreet = dplyr::case_when(
-                str_detect(Street, 'dba') ~ Street2,
-                str_detect(Street, '[0-9]|[One]', negate = T) ~ Street2,
+                stringr::str_detect(Street, 'dba') ~ Street2,
+                stringr::str_detect(Street, '[0-9]|[One]', negate = T) ~ Street2,
                 .default = Street
                 ),
             Type = 'Mammography',
