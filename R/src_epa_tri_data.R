@@ -14,7 +14,7 @@
 #' @import lgr
 #' @import dplyr
 #' @importFrom tidyr pivot_wider
-#' @importFrom stringr str_pad str_to_title str_c
+#' @importFrom stringr str_pad str_to_title str_c str_split_fixed
 #' 
 #' @return A data frame (data.frame) containing data pulled from the Envirofacts API.
 #'
@@ -56,7 +56,7 @@ src_epa_tri_data = function(){
         tri = read.csv(url, header=T)
     }
     
-    colnames(tri) = str_split_fixed(colnames(tri), pattern = '\\.\\.', 2)[,2]
+    colnames(tri) = stringr::str_split_fixed(colnames(tri), pattern = '\\.\\.', 2)[,2]
     
     tri = tri |>
         dplyr::filter(!(ST %in% c('AS', 'GU', 'MP', 'PR', 'VI'))) |>
