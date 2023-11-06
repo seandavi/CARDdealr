@@ -12,7 +12,7 @@ lung cancer screening registry (LCSR)."><!-- mathjax --><script src="https://cdn
     
     <a class="navbar-brand me-2" href="../index.html">CARDdealr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.5</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@ lung cancer screening registry (LCSR).</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">src_acr_lung_cancer_screening_data</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">src_acr_lung_cancer_screening_data</span><span class="op">(</span>state <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -53,6 +53,17 @@ lung cancer screening registry (LCSR).</p>
     
 <ul><li><p><a href="https://www.acr.org/Clinical-Resources/Lung-Cancer-Screening-Resources/LCS-Locator-Tool" class="external-link">Data Source</a></p></li>
 </ul></div>
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
+    <dl><dt>state</dt>
+<dd><p>Character string or vector of character strings of state postal abbreviations</p></dd>
+
+
+<dt>...</dt>
+<dd><p>passed to <code><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">readr::read_csv()</a></code> and useful for limiting
+the number of rows read for testing or glimpsing data.</p></dd>
+
+</dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
@@ -75,7 +86,13 @@ recommendations and monitor and compare appropriate use of Lung-RADS#'</p>
     <div class="dont-index"><p>Other data accessors: 
 <code><a href="src_bls_unemployment_data.html">src_bls_unemployment_data</a>()</code>,
 <code><a href="src_brfss.html">src_brfss</a>()</code>,
-<code><a href="src_epa_superfund_data.html">src_epa_superfund_data</a>()</code></p></div>
+<code><a href="src_cdc_places_data.html">src_cdc_places_data</a>()</code>,
+<code><a href="src_epa_superfund_data.html">src_epa_superfund_data</a>()</code>,
+<code><a href="src_epa_tri_data.html">src_epa_tri_data</a>()</code>,
+<code><a href="src_fda_mammography_data.html">src_fda_mammography_data</a>()</code>,
+<code><a href="src_hrsa_facility_data.html">src_hrsa_facility_data</a>()</code>,
+<code><a href="src_nppes_gi_data.html">src_nppes_gi_data</a>()</code>,
+<code><a href="src_nppes_onco_data.html">src_nppes_onco_data</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -87,19 +104,9 @@ recommendations and monitor and compare appropriate use of Lung-RADS#'</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># example code</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">lcs</span> <span class="op">=</span> <span class="fu">src_acr_lung_cancer_screening_data</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [22:01:05.567] Starting acr_lung_cancer_screening_data</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">3583</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">8</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Delimiter:</span> ","</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #BB0000;">chr</span> (8): 1 Facility Name, 2 Street Address, 3 city, 4 state, 5 ZIP Code, 6 P...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in dplyr::filter(lcs, ifelse(!is.null(state), fk_ref_state_code %in%     state, TRUE)):</span> <span style="color: #00BBBB;">ℹ</span> In argument: `ifelse(!is.null(state), fk_ref_state_code %in% state,</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span>   TRUE)`.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> object 'fk_ref_state_code' not found</span>
+<span class="r-in"><span><span class="va">lcs</span> <span class="op">=</span> <span class="fu">src_acr_lung_cancer_screening_data</span><span class="op">(</span>nrows<span class="op">=</span><span class="fl">1000</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> INFO  [10:08:31.473] Starting acr_lung_cancer_screening_data</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in read_csv("https://report.acr.org/t/PUBLIC/views/NRDRLCSLocator/ACRLCSDownload.csv",     ...):</span> unused argument (nrows = 1000)</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">lcs</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'lcs' not found</span>

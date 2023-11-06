@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/LICENSE-text.html</loc>
+    <loc>/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/LICENSE.html</loc>
+    <loc>/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/authors.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/cdr_get_cache.html</loc>
+    <loc>/reference/cdr_get_cache.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/get_carddealr_logger.html</loc>
+    <loc>/reference/get_carddealr_logger.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/index.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/integer_to_fips.html</loc>
+    <loc>/reference/integer_to_fips.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/src_acr_lung_cancer_screening_data.html</loc>
+    <loc>/reference/src_acr_lung_cancer_screening_data.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/src_bls_unemployment_data.html</loc>
+    <loc>/reference/src_bls_unemployment_data.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/src_brfss.html</loc>
+    <loc>/reference/src_brfss.html</loc>
   </url>
   <url>
-    <loc>https://cards-resources.github.io/CARDdealr/reference/src_epa_superfund_data.html</loc>
+    <loc>/reference/src_cdc_places_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/src_epa_superfund_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/src_epa_tri_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/src_fda_mammography_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/src_hrsa_facility_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/src_nppes_gi_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/src_nppes_onco_data.html</loc>
   </url>
 </urlset>
