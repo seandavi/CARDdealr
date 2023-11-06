@@ -42,6 +42,7 @@ Other data accessors:
 \code{\link{src_acr_lung_cancer_screening_data}()},
 \code{\link{src_bls_unemployment_data}()},
 \code{\link{src_brfss}()},
+\code{\link{src_cdc_places_data}()},
 \code{\link{src_epa_superfund_data}()},
 \code{\link{src_epa_tri_data}()},
 \code{\link{src_fda_mammography_data}()},

@@ -49,7 +49,13 @@ dplyr::glimpse(lcs)
 Other data accessors: 
 \code{\link{src_bls_unemployment_data}()},
 \code{\link{src_brfss}()},
-\code{\link{src_epa_superfund_data}()}
+\code{\link{src_cdc_places_data}()},
+\code{\link{src_epa_superfund_data}()},
+\code{\link{src_epa_tri_data}()},
+\code{\link{src_fda_mammography_data}()},
+\code{\link{src_hrsa_facility_data}()},
+\code{\link{src_nppes_gi_data}()},
+\code{\link{src_nppes_onco_data}()}
 }
 \author{
 Todd Burus \href{mailto:tburus@uky.edu}{tburus@uky.edu}
