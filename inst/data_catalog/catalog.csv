@@ -1,0 +1,11 @@
+﻿name,accessor
+American College of Radiology Lung Cancer Screening Registry (LCSR) dataset,src_acr_lung_cancer_screening_data
+Bureau of Labor Statistics Unemployment data,src_bls_unemployment_data
+Behavioral Risk Factor Surveillance System (BRFSS),src_brfss
+CDC Places,src_cdc_places_data
+EPA Toxic Release Inventory (TRI),src_epa_tri_data
+Environmental Protection Agency Superfund,src_epa_superfund_data
+FDA Certified Mammography Facilities Dataset,src_fda_mammography_data
+Health Resources and Services Administration (HRSA) facilities,src_hrsa_facility_data
+National Plan & Provider Enumeration System (NPPES) GI providers,src_nppes_gi_data
+National Plan & Provider Enumeration System (NPPES) Oncology Providers,src_nppes_onco_data
