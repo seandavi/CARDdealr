@@ -34,7 +34,7 @@
 #' # example code
 #' 
 #'
-#' lcs = src_acr_lung_cancer_screening_data(nrows=1000)
+#' lcs = src_acr_lung_cancer_screening_data(n_max=1000)
 #'
 #' colnames(lcs)
 #'
