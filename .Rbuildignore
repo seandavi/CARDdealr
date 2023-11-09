@@ -5,3 +5,5 @@ R_waiting
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+README.rmd
+^README\.Rmd$
