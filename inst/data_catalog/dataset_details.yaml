@@ -1,0 +1,301 @@
+datasets:
+  src_acr_lung_cancer_screening_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Notes: character
+      latitude: character
+      longitude: character
+    dimensions:
+      nrow: 3590
+      ncol: 8
+  src_bls_unemployment_data:
+    columns:
+      series_id: character
+      year: numeric
+      period: character
+      value: numeric
+      footnote_codes: character
+      location_type: character
+      measure: character
+      location: character
+      state: character
+      seasonal_adj: logical
+    dimensions:
+      nrow: 11141058
+      ncol: 10
+  src_brfss:
+    columns:
+      Year: numeric
+      Locationabbr: character
+      Locationdesc: character
+      Class: character
+      Topic: character
+      Question: character
+      Response: character
+      Break_Out: character
+      Break_Out_Category: character
+      Sample_Size: numeric
+      Data_value: numeric
+      Confidence_limit_Low: numeric
+      Confidence_limit_High: numeric
+      Display_order: numeric
+      Data_value_unit: character
+      Data_value_type: character
+      Data_Value_Footnote_Symbol: character
+      Data_Value_Footnote: character
+      DataSource: character
+      ClassId: character
+      TopicId: character
+      LocationID: character
+      BreakoutID: character
+      BreakOutCategoryID: character
+      QuestionID: character
+      ResponseID: character
+      GeoLocation: character
+    dimensions:
+      nrow: 2522478
+      ncol: 27
+  src_cdc_places_data:
+    columns:
+      StateAbbr: character
+      StateDesc: character
+      CountyName: character
+      CountyFIPS: integer
+      TotalPopulation: integer
+      ACCESS2_CrudePrev: numeric
+      ACCESS2_Crude95CI: character
+      ACCESS2_AdjPrev: numeric
+      ACCESS2_Adj95CI: character
+      ARTHRITIS_CrudePrev: numeric
+      ARTHRITIS_Crude95CI: character
+      ARTHRITIS_AdjPrev: numeric
+      ARTHRITIS_Adj95CI: character
+      BINGE_CrudePrev: numeric
+      BINGE_Crude95CI: character
+      BINGE_AdjPrev: numeric
+      BINGE_Adj95CI: character
+      BPHIGH_CrudePrev: numeric
+      BPHIGH_Crude95CI: character
+      BPHIGH_AdjPrev: numeric
+      BPHIGH_Adj95CI: character
+      BPMED_CrudePrev: numeric
+      BPMED_Crude95CI: character
+      BPMED_AdjPrev: numeric
+      BPMED_Adj95CI: character
+      CANCER_CrudePrev: numeric
+      CANCER_Crude95CI: character
+      CANCER_AdjPrev: numeric
+      CANCER_Adj95CI: character
+      CASTHMA_CrudePrev: numeric
+      CASTHMA_Crude95CI: character
+      CASTHMA_AdjPrev: numeric
+      CASTHMA_Adj95CI: character
+      CERVICAL_CrudePrev: numeric
+      CERVICAL_Crude95CI: character
+      CERVICAL_AdjPrev: numeric
+      CERVICAL_Adj95CI: character
+      CHD_CrudePrev: numeric
+      CHD_Crude95CI: character
+      CHD_AdjPrev: numeric
+      CHD_Adj95CI: character
+      CHECKUP_CrudePrev: numeric
+      CHECKUP_Crude95CI: character
+      CHECKUP_AdjPrev: numeric
+      CHECKUP_Adj95CI: character
+      CHOLSCREEN_CrudePrev: numeric
+      CHOLSCREEN_Crude95CI: character
+      CHOLSCREEN_AdjPrev: numeric
+      CHOLSCREEN_Adj95CI: character
+      COLON_SCREEN_CrudePrev: numeric
+      COLON_SCREEN_Crude95CI: character
+      COLON_SCREEN_AdjPrev: numeric
+      COLON_SCREEN_Adj95CI: character
+      COPD_CrudePrev: numeric
+      COPD_Crude95CI: character
+      COPD_AdjPrev: numeric
+      COPD_Adj95CI: character
+      COREM_CrudePrev: numeric
+      COREM_Crude95CI: character
+      COREM_AdjPrev: numeric
+      COREM_Adj95CI: character
+      COREW_CrudePrev: numeric
+      COREW_Crude95CI: character
+      COREW_AdjPrev: numeric
+      COREW_Adj95CI: character
+      CSMOKING_CrudePrev: numeric
+      CSMOKING_Crude95CI: character
+      CSMOKING_AdjPrev: numeric
+      CSMOKING_Adj95CI: character
+      DENTAL_CrudePrev: numeric
+      DENTAL_Crude95CI: character
+      DENTAL_AdjPrev: numeric
+      DENTAL_Adj95CI: character
+      DEPRESSION_CrudePrev: numeric
+      DEPRESSION_Crude95CI: character
+      DEPRESSION_AdjPrev: numeric
+      DEPRESSION_Adj95CI: character
+      DIABETES_CrudePrev: numeric
+      DIABETES_Crude95CI: character
+      DIABETES_AdjPrev: numeric
+      DIABETES_Adj95CI: character
+      GHLTH_CrudePrev: numeric
+      GHLTH_Crude95CI: character
+      GHLTH_AdjPrev: numeric
+      GHLTH_Adj95CI: character
+      HIGHCHOL_CrudePrev: numeric
+      HIGHCHOL_Crude95CI: character
+      HIGHCHOL_AdjPrev: numeric
+      HIGHCHOL_Adj95CI: character
+      KIDNEY_CrudePrev: numeric
+      KIDNEY_Crude95CI: character
+      KIDNEY_AdjPrev: numeric
+      KIDNEY_Adj95CI: character
+      LPA_CrudePrev: numeric
+      LPA_Crude95CI: character
+      LPA_AdjPrev: numeric
+      LPA_Adj95CI: character
+      MAMMOUSE_CrudePrev: numeric
+      MAMMOUSE_Crude95CI: character
+      MAMMOUSE_AdjPrev: numeric
+      MAMMOUSE_Adj95CI: character
+      MHLTH_CrudePrev: numeric
+      MHLTH_Crude95CI: character
+      MHLTH_AdjPrev: numeric
+      MHLTH_Adj95CI: character
+      OBESITY_CrudePrev: numeric
+      OBESITY_Crude95CI: character
+      OBESITY_AdjPrev: numeric
+      OBESITY_Adj95CI: character
+      PHLTH_CrudePrev: numeric
+      PHLTH_Crude95CI: character
+      PHLTH_AdjPrev: numeric
+      PHLTH_Adj95CI: character
+      SLEEP_CrudePrev: numeric
+      SLEEP_Crude95CI: character
+      SLEEP_AdjPrev: numeric
+      SLEEP_Adj95CI: character
+      STROKE_CrudePrev: numeric
+      STROKE_Crude95CI: character
+      STROKE_AdjPrev: numeric
+      STROKE_Adj95CI: character
+      TEETHLOST_CrudePrev: numeric
+      TEETHLOST_Crude95CI: character
+      TEETHLOST_AdjPrev: numeric
+      TEETHLOST_Adj95CI: character
+      HEARING_CrudePrev: numeric
+      HEARING_Crude95CI: character
+      HEARING_AdjPrev: numeric
+      HEARING_Adj95CI: character
+      VISION_CrudePrev: numeric
+      VISION_Crude95CI: character
+      VISION_AdjPrev: numeric
+      VISION_Adj95CI: character
+      COGNITION_CrudePrev: numeric
+      COGNITION_Crude95CI: character
+      COGNITION_AdjPrev: numeric
+      COGNITION_Adj95CI: character
+      MOBILITY_CrudePrev: numeric
+      MOBILITY_Crude95CI: character
+      MOBILITY_AdjPrev: numeric
+      MOBILITY_Adj95CI: character
+      SELFCARE_CrudePrev: numeric
+      SELFCARE_Crude95CI: character
+      SELFCARE_AdjPrev: numeric
+      SELFCARE_Adj95CI: character
+      INDEPLIVE_CrudePrev: numeric
+      INDEPLIVE_Crude95CI: character
+      INDEPLIVE_AdjPrev: numeric
+      INDEPLIVE_Adj95CI: character
+      DISABILITY_CrudePrev: numeric
+      DISABILITY_Crude95CI: character
+      DISABILITY_AdjPrev: numeric
+      DISABILITY_Adj95CI: character
+      Geolocation: character
+    dimensions:
+      nrow: 3143
+      ncol: 154
+  src_epa_tri_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Noncarcinogenic: character
+      Carcinogenic: character
+      latitude: numeric
+      longitude: numeric
+    dimensions:
+      nrow: 21623
+      ncol: 9
+  src_epa_superfund_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Notes: character
+      latitude: character
+      longitude: character
+    dimensions:
+      nrow: 2305
+      ncol: 8
+  src_fda_mammography_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Notes: character
+      latitude: character
+      longitude: character
+    dimensions:
+      nrow: 8830
+      ncol: 8
+  src_hrsa_facility_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Notes: character
+      latitude: numeric
+      longitude: numeric
+    dimensions:
+      nrow: 19156
+      ncol: 8
+  src_nppes_gi_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Notes: character
+      latitude: character
+      longitude: character
+    dimensions:
+      nrow: 20408
+      ncol: 8
+  src_nppes_onco_data:
+    columns:
+      Type: character
+      Name: character
+      Address: character
+      State: character
+      Phone_number: character
+      Notes: character
+      latitude: character
+      longitude: character
+    dimensions:
+      nrow: 34687
+      ncol: 8
+eval_date: '2023-11-09'
+
